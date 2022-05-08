@@ -96,6 +96,7 @@ list = [0,1,2,3,5,8,13,2,2,2]
 include?(list, 13)
 =end
 
+=begin
 This is the first step to understanding FizzBuzz.
 
 Your inputs: a positive integer, n, greater than or equal to one. n is provided, you have NO CONTROL over its value.
@@ -114,5 +115,52 @@ end
 
 
 pre_fizz(10)
+=end
+
+=begin
+Define a method hello that returns "Hello, Name!" to a given name, or says Hello, World! if name is not given (or passed as an empty String).
+
+Assuming that name is a String and it checks for user typos to return a name with a first capital letter (Xxxx).
+
+Examples:
+
+* With `name` = "john"  => return "Hello, John!"
+* With `name` = "aliCE" => return "Hello, Alice!"
+* With `name` not given 
+  or `name` = ""        => return "Hello, World!"
 
 
+def hello(name='')
+  greeting = ""
+  if !name.empty?
+    greeting = "Hello, #{(name.downcase).capitalize}!" 
+  elsif name == ' '
+    greeting = "Hello, World!"
+  else
+    greeting = "Hello, World!"
+  end
+  return greeting
+end
+
+=end
+
+=begin
+def open_or_senior(data)
+  for i in 0..data.length do
+    if data[i][0] > data[i][1]
+      puts "Hello"
+    end
+  end
+end
+
+
+open_or_senior([[45, 45],[55,21],[19, -2],[104, 20]])
+=end
+
+
+def reverse(string)
+  puts string.split("").each {|word| word.reverse}.join("").reverse
+end
+
+
+reverse('I am an expert at this')
